@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas Example</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <script type="module">
+      import { instantiate } from "./lib/rs_lib.generated.js";
+      const { setup } = await instantiate();
+      const canvas = document.getElementById("canvas");
+      setup(canvas);
+    </script>
+  </body>
+</html>

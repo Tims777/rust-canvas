@@ -1,0 +1,33 @@
+[package]
+name = "rs_lib"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+incremental = true
+lto = true
+opt-level = "z"
+
+[dependencies]
+js-sys = "=0.3.69"
+wasm-bindgen = "=0.2.92"
+
+[dependencies.web-sys]
+version = "0.3.69"
+features = [
+  'CanvasRenderingContext2d',
+  'CssStyleDeclaration',
+  'Document',
+  'Element',
+  'EventTarget',
+  'HtmlCanvasElement',
+  'HtmlElement',
+  'MouseEvent',
+  'Node',
+  'Window',
+  'PointerEvent',
+]
